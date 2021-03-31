@@ -1,0 +1,24 @@
+{
+  "name": "custom-element-react-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "esbuild": "^0.11.2",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-bootstrap": "^1.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon --exec npm run build:dev",
+    "build:dev": "npx esbuild src/index.jsx --define:process.env.NODE_ENV=\"'development'\" --bundle --outfile=dist/bundle.js",
+    "build:prod": "npx esbuild src/index.jsx --minify --define:process.env.NODE_ENV=\"'production'\" --bundle --outfile=dist/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
